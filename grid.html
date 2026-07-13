@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns:repeat(3,1fr) ;
+            grid-template-rows: 1fr 1fr;
+        }
+        .container div:nth-child(even){
+             background-color: #b5fe9b;
+             border: 2px solid rgb(0, 0, 0);
+        }
+        .container div:nth-child(odd){
+            background-color: rgb(0, 99%, 59%);
+            border:2px solid rgb(0, 0, 0);
+        }
+        .container2{
+                    display:grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-areas: 
+                        "header header header header header"
+                        "img1 img2 img3 img4 img5"
+                        "text1 text1 text1 text2 text2"
+                        "footer footer footer footer footer";
+                }
+                 .container2 div:nth-child(1){
+                    grid-area: header;
+                }
+                .container2 div:nth-child(2){
+                    grid-area: img1;
+                }
+                .container2 div:nth-child(3){
+                    grid-area: img2;
+                }
+                .container2 div:nth-child(4){
+                    grid-area: img3;
+                }
+                .container2 div:nth-child(5){
+                    grid-area: img4;
+                }
+                .container2 div:nth-child(6){
+                    grid-area: img5;
+                }
+                .container2 div:nth-child(7){
+                    grid-area: text1;
+                }
+                .container2 div:nth-child(8){
+                    grid-area: text2;
+                }
+                .container2 div:nth-child(9){
+                    grid-area: footer;
+                }  
+    </style>
+    <div class="container">
+            <div >Item 1</div>
+            <div >Item 2 </div>
+            <div >Item 3</div>
+            <div >Item 4</div>
+            <div >Item 5</div>
+            <div >Item 6</div>
+            
+        </div>
+    
+    
+        <div class="container2">
+            <div style="background-color: lightblue; border: 2px solid black;">
+               <h1>This is Grid header</h1>
+            </div>
+            <div style="background-color: lightgreen; border: 2px solid black;">
+                <img src="./picture/banana.jpg" height="150px" alt="Placeholder Image">
+            </div>
+            <div style="background-color: lightcoral; border: 2px solid black;">
+                <img src="./picture/budget.png" height="150px" alt="Placeholder Image">
+            </div>
+            <div style="background-color: lightgoldenrodyellow; border: 2px solid black;">
+                <img src="./picture/budget.png" height="150px" alt="Placeholder Image">
+            </div>
+            <div style="background-color: lightpink; border: 2px solid black;">
+                <img src="./picture/budget.png" height="150px" alt="Placeholder Image">
+            </div>
+            <div style="background-color: lightgray; border: 2px solid black;">
+                <img src="./picture/budget.png" height="150px" alt="Placeholder Image">
+            </div>
+            <div style="background-color: rgb(148, 2, 112); border: 2px solid black;">
+                <p>this is my image photo and this is a calculator image</p>
+            </div>
+            <div style="background-color: rgb(39, 255, 39); border: 2px solid black;">
+                <p>contact us at : email@gmail.com</p>
+            </div>
+            <div style="background-color: rgb(210, 39, 39); border: 2px solid black;">
+                <p>this is footer section</p>
+            </div>
+        </div>
+</body>
+</html>

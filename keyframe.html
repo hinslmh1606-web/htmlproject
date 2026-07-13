@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .animated-box{
+            width: 200px;
+            height: 100px;            
+            background-color: rgb(112, 198, 226);
+            position: relative;
+        }
+        .car-box{
+            top: 0px;
+            position: absolute;
+            animation-name: moveforward, car-rotate;
+            animation-duration: 3s,1s;
+            animation-delay: 0s, 3s;
+            animation-iteration-count: 1, 1;
+            animation-fill-mode: forwards, forwards;
+            animation-timing-function: linear;
+        }
+        .tome{
+            width: 20px;
+            height: 100px;
+            position: absolute;
+            top: 60px;
+            left: 950px;
+            background-color: black;
+        }
+        @keyframes moveforward{
+            0%{
+                left:0；
+            }
+            100%{
+                transform:translateX(850px);
+            }
+        }
+        @keyframes car-rotate{
+            0%{
+                left: 850px;
+                transform: rotate(0deg);
+            }
+            100%{
+                left: 950px;
+                transform: rotate(235deg);
+            }
+        }
+</style>                
+</body>
+    <div class="animated-box">
+        <div class="car-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2IyR1JyB1VwUaCE2ZhJnS5jYZkMujRFn87gtt6MGYA&s=10" alt="car"  width="200px" height="100px">
+        </div>
+    </div>
+
+    <div class="tome"></div>
+</html>
